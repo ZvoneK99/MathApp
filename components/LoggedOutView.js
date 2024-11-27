@@ -17,6 +17,7 @@ export default function LoggedOutView() {
     signInWithEmailAndPassword(auth, email, passw)
       .then(() => {
         login();
+        navigation.navigate("Home");
       })
       .catch((error) => setErrorMsg(error.message));
   };
